@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.solution.rentalapp.RentRecivedActivity">
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:elevation="2dp" />
+    <TextView
+        android:id="@+id/tv_rname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Resident Name:" />
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address:" />
+
+    <EditText
+        android:id="@+id/et_amountpaid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Amount paid:" />
+    <Button
+        android:id="@+id/notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle"
+        android:onClick="returnhome"
+        android:text="Send Notification" />
+
+    <Button
+        android:id="@+id/btnsubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle"
+        android:onClick="returnhome"
+        android:text="Save Details" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/circle"
+        android:onClick="logout"
+        android:text="logout" />
+</LinearLayout>
