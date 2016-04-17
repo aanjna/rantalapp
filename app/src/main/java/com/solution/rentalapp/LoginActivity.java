@@ -12,8 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
-    private static final String TAG = "LoginActivity";
-    Button b_login;
+    private static final String TAG = "Login";
+    Button btnlogin;
     EditText et_username, et_password;
     TextView tv_forgetpass;
 
@@ -26,9 +26,9 @@ public class LoginActivity extends AppCompatActivity {
 
         et_username = (EditText) findViewById(R.id.et_username);
         et_password = (EditText) findViewById(R.id.et_password);
-        b_login = (Button) findViewById(R.id.b_login);
+        btnlogin = (Button) findViewById(R.id.b_login);
         tv_forgetpass = (TextView) findViewById(R.id.tv_forgetpass);
-        b_login.setOnClickListener(new View.OnClickListener() {
+        btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 login();
@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        b_login.setEnabled(false);
+        btnlogin.setEnabled(false);
 
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
                 R.style.AppTheme);
@@ -76,14 +76,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginSuccess() {
-        b_login.setEnabled(true);
+        btnlogin.setEnabled(true);
         finish();
     }
 
     public void onLoginFailed() {
         Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
 
-        b_login.setEnabled(true);
+        btnlogin.setEnabled(true);
     }
 
     public boolean validate() {
