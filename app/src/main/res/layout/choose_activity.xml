@@ -41,7 +41,7 @@
             android:background="@drawable/circle"
             android:drawableTop="@android:drawable/ic_menu_edit"
             android:paddingTop="20dp"
-            android:text="Add resident"
+            android:text="new resident"
             android:textColor="#fff" />
 
         <Button
@@ -53,7 +53,7 @@
             android:background="@drawable/circle"
             android:drawableTop="@android:drawable/ic_menu_myplaces"
             android:paddingTop="20dp"
-            android:text="Add Building"
+            android:text="new Building"
             android:textColor="#fff" />
 
         <Button
