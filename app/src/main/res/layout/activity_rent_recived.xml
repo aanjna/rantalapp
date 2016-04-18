@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:orientation="vertical"
     tools:context="com.solution.rentalapp.RentRecivedActivity">
     <SearchView
@@ -15,11 +16,13 @@
         android:id="@+id/tv_rname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:hint="Resident Name:" />
     <TextView
         android:id="@+id/tv_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:hint="Address:" />
 
     <EditText
@@ -32,23 +35,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/circle"
-        android:onClick="returnhome"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:onClick="buttonOnClick"
         android:text="Send Notification" />
 
-    <Button
-        android:id="@+id/btnsubmit"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/circle"
-        android:onClick="returnhome"
-        android:text="Save Details" />
-
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/circle"
-        android:onClick="logout"
-        android:text="logout" />
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnsubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/circle"
+            android:onClick="buttonOnClick"
+            android:text="Return Home" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/circle"
+            android:onClick="buttonOnClick"
+            android:text="logout" />
+    </LinearLayout>
 </LinearLayout>

@@ -51,31 +51,58 @@
             android:layout_height="wrap_content"
             android:hint="Zip code:" />
 
-        <EditText
-            android:id="@+id/apartment_no"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="From__ to__(insert numbers)" />
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/apartment_nofrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="From (insert numbers)" />
+
+            <EditText
+                android:id="@+id/apartment_noto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="to" />
+        </LinearLayout>
         <EditText
             android:id="@+id/uniq_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Unique description(house, studio,etc)" />
-        <Button
-            android:id="@+id/btnsubmit"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="returnhome"
-            android:background="@drawable/circle"
-            android:text="Submit Details"/>
-        <Button
-            android:id="@+id/logout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="logout"
-            android:background="@drawable/circle"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:layout_alignParentBottom="true"
-            android:text="logout" />
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnsubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:onClick="buttonOnClick"
+                android:text="Return Home" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:onClick="buttonOnClick"
+                android:text="logout" />
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>

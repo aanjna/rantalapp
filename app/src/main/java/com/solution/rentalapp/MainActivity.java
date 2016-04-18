@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Button newresident, newbuilding, editresident, editbuilding, editrentinfo, rentreciev;
+    Button newresident, newbuilding, editresident, editbuilding, editrentinfo, rentreciev , logout;
     SharedPreferences loginPref;
     TextView welcomeMessage;
     String userName, password, displayMessage;
@@ -20,15 +20,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.choose_activity
+        );
      /*   Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);*/
-        isSaved = loginPref.getBoolean(SAVED_KEY, false);
+       /* isSaved = loginPref.getBoolean(SAVED_KEY, false);
         userName = loginPref.getString(USERNAME_KEY, "");
         displayMessage = "Welcome Back " + userName;
         if (isSaved) {
             welcomeMessage.setText(displayMessage);
-        }
+        }*/
 
         newresident = (Button) findViewById(R.id.newresident);
         newbuilding = (Button) findViewById(R.id.newbuilding);
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         editbuilding = (Button) findViewById(R.id.edit_building);
         editrentinfo = (Button) findViewById(R.id.security_deposit);
         rentreciev = (Button) findViewById(R.id.rent_received);
+        logout = (Button) findViewById(R.id.logout);
 
 
     }
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.edit_building:
-                Intent ieditbuilding = new Intent(getApplicationContext(), EditExistResident.class);
+                Intent ieditbuilding = new Intent(getApplicationContext(), AddExistBuildingActivity.class);
                 startActivity(ieditbuilding);
                 break;
 
@@ -75,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent irentreceive = new Intent(getApplicationContext(), RentRecivedActivity.class);
                 startActivity(irentreceive);
+                break;
+
+            case R.id.logout:
+                Intent logout = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(logout);
                 break;
         }
     }

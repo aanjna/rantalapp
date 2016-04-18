@@ -58,13 +58,13 @@
                 android:id="@+id/mobile1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Cell phon:" />
+                android:hint="Cell phone:" />
 
             <EditText
                 android:id="@+id/mobile2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Second Phon:" />
+                android:hint="Second Phone:" />
         </LinearLayout>
 
         <EditText
@@ -79,22 +79,34 @@
             android:layout_height="wrap_content"
             android:hint="Second Email:" />
 
-        <Button
-            android:id="@+id/btnsubmit"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/circle"
-            android:onClick="returnhome"
-            android:text="Save Details" />
-
-        <Button
-            android:id="@+id/logout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/circle"
-            android:onClick="logout"
-            android:text="logout" />
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnsubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:onClick="buttonOnClick"
+                android:text="Return Home" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:onClick="buttonOnClick"
+                android:text="logout" />
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>

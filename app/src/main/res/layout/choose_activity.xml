@@ -3,21 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="20dp">
+        android:layout_margin="20sp"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="5dp"
             android:text="Welcome back ,"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/welcm"
@@ -25,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="username"
             android:textColor="@color/green"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -35,32 +34,38 @@
         android:paddingBottom="20dp">
 
         <Button
+            android:id="@+id/newresident"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:onClick="buttonOnClick"
             android:background="@drawable/circle"
-            android:drawableTop="@android:drawable/ic_dialog_email"
+            android:drawableTop="@android:drawable/ic_menu_edit"
             android:paddingTop="20dp"
-            android:text="Contact"
+            android:text="Add resident"
             android:textColor="#fff" />
 
         <Button
+            android:id="@+id/newbuilding"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:onClick="buttonOnClick"
             android:layout_marginLeft="10dp"
             android:background="@drawable/circle"
-            android:drawableTop="@android:drawable/ic_dialog_map"
+            android:drawableTop="@android:drawable/ic_menu_myplaces"
             android:paddingTop="20dp"
-            android:text="Map"
+            android:text="Add Building"
             android:textColor="#fff" />
 
         <Button
+            android:id="@+id/rent_received"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:onClick="buttonOnClick"
             android:layout_marginLeft="10dp"
             android:background="@drawable/circle"
-            android:drawableTop="@android:drawable/ic_dialog_info"
+            android:drawableTop="@android:drawable/ic_menu_month"
             android:paddingTop="20dp"
-            android:text="Info"
+            android:text="Rent receive"
             android:textColor="#fff" />
     </LinearLayout>
 
@@ -71,32 +76,38 @@
         android:paddingBottom="20dp">
 
         <Button
+            android:id="@+id/edit_resident"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:onClick="buttonOnClick"
             android:background="@drawable/circle"
-            android:drawableTop="@android:drawable/ic_dialog_email"
+            android:drawableTop="@android:drawable/ic_input_get"
             android:paddingTop="20dp"
-            android:text="Contact"
+            android:text="Edit resident"
             android:textColor="#fff" />
 
         <Button
+            android:id="@+id/edit_building"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:onClick="buttonOnClick"
             android:layout_marginLeft="10dp"
             android:background="@drawable/circle"
-            android:drawableTop="@android:drawable/ic_dialog_map"
+            android:drawableTop="@android:drawable/ic_menu_add"
             android:paddingTop="20dp"
-            android:text="Map"
+            android:text="edit building"
             android:textColor="#fff" />
 
         <Button
+            android:id="@+id/security_deposit"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:onClick="buttonOnClick"
             android:layout_marginLeft="10dp"
             android:background="@drawable/circle"
-            android:drawableTop="@android:drawable/ic_dialog_info"
+            android:drawableTop="@android:drawable/ic_lock_lock"
             android:paddingTop="20dp"
-            android:text="Info"
+            android:text="security deposit"
             android:textColor="#fff" />
     </LinearLayout>
 
@@ -105,6 +116,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:onClick="logout"
+        android:background="@drawable/circle"
+        android:onClick="buttonOnClick"
         android:text="logout" />
+
 </LinearLayout>
