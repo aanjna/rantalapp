@@ -37,12 +37,14 @@
 
             <EditText
                 android:id="@+id/f_name"
+                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="First name:" />
 
             <EditText
                 android:id="@+id/l_name"
+                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Last name:" />
@@ -56,12 +58,14 @@
 
             <EditText
                 android:id="@+id/mobile1"
+                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Cell phone:" />
 
             <EditText
                 android:id="@+id/mobile2"
+                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Second Phone:" />
